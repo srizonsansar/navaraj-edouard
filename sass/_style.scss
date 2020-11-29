@@ -1,0 +1,658 @@
+/* --- Banner --- */
+@mixin banner_Spacing{
+    display: inline-block;
+    padding:1rem 2rem;
+}
+#banner{
+    position: relative;
+    color: #fff;
+
+    .bgImage{
+        background-image: url(../images/banner.jpg);
+        background-position: center center;
+        background-size: cover;
+        min-height: 55rem;
+    }
+    .overlayItems{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .banner__Left{
+        position: absolute;
+        left: 8.5rem;
+        top: 4rem;
+
+        h3{
+            font-size: 2.6rem;
+            font-weight: 400;
+
+            span{
+                @include banner_Spacing;
+                background: $secondary-color;
+            }
+        }
+        h4{
+            font-size: 2.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 4rem;
+
+            span{
+                @include banner_Spacing();
+                background: $primary-color;
+            }
+        }
+        p{
+            font-size: 1.8rem;
+            span{
+                @include banner_Spacing();
+                background: $primary-color;
+                padding-top: 0;
+            }
+        }
+    }
+
+    .badge{
+        position: absolute;
+        top:50%;
+        right: 10rem;
+        transform: translateY(-50%);
+    }
+}
+@media (max-width:1320px){
+    #banner{
+
+        .badge{
+
+            img{
+                max-width: 28rem;
+            }
+        }
+    }
+}
+@media (max-width:991px){
+    #banner{
+
+        .bgImage{
+            min-height: 40rem;
+        }
+        .banner__Left{
+            left: 5rem;
+
+            h3{
+                font-size: 1.6rem;
+            }
+            h4{
+                font-size: 2rem;
+                line-height: 2rem;
+            }
+            p{
+                font-size: 1.4rem;
+            }
+        }
+        .badge{
+            right: 5rem;
+
+            img{
+                width: 20rem;
+            }
+        }
+
+    }
+}
+@media (max-width:767px){
+    #banner{
+
+        .bgImage{
+            min-height: 30rem;
+        }
+        .overlayItems{
+            position: static;
+        }
+        .banner__Left{
+            position: static;
+
+            h3{
+                text-align: center;
+                span{
+                    display: block;
+                }
+            }
+            h4{
+                text-align: center;
+                line-height: 3rem;
+
+                span{
+                    display: block;
+                    padding-top: 1.5rem;
+                    padding-bottom: 0.5rem;
+                }
+            }
+            p{
+                text-align: center;
+
+                span{
+                    display: block;
+                    padding-bottom: 1.5rem;
+                }
+            }
+        }
+        .badge{
+            position: static;
+            transform: none;
+            text-align: center;
+            padding-top: 2rem;
+            padding-bottom: 2rem
+        }
+    }
+}
+@media (max-width:575px){
+    #banner{
+
+        .bgImage{
+            min-height: 20rem;
+        }
+    }
+}
+/* --- Gray Section --- */
+#graySection{
+    background-color: $light-gray-color;
+    text-align: center;
+    padding: 5.5rem 0 6rem;
+    margin-bottom: 6.5rem;
+
+    h3{
+        font-size: 3rem;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        &:first-child{
+            display: flex;
+            justify-content: center;
+        }
+
+        i{
+            display: inline-block;
+            background-image: url(../images/sun.png);
+            width: 5.6rem;
+            height: 5.8rem;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            transform: translateY(-2rem);
+        }
+    }
+
+    h4{
+        font-size: 4rem;
+        text-transform: uppercase;
+        color: $secondary-color;
+        line-height: 5.5rem;
+    }
+
+    h5{
+        font-size: 3.5rem;
+        line-height: 4rem;
+        padding-bottom: 1rem;
+    }
+    h6{
+        font-size: 3.5rem;
+        font-weight: 300;
+        color: $third-color;
+    }
+}
+@media (max-width:1320px){
+    #graySection{
+
+        h5{
+            font-size: 3rem;
+        }
+
+    }
+}
+@media (max-width:991px){
+    #graySection{
+
+        h4{
+            font-size: 3rem;
+            line-height: 4rem;
+        }
+        h5{
+            font-size: 2.2rem;
+            line-height: 3.2rem;
+        }
+        h6{
+            font-size: 2.8rem;
+        }
+
+    }
+}
+@media (max-width:767px){
+    #graySection{
+        padding: 3rem 0 2rem;
+
+        h3{
+            font-size: 1.5rem;
+
+            i{
+                width: 3.2rem;
+                height: 3.3rem;
+                background-size: 3.2rem 3.3rem;
+                transform: translateY(-1.2rem);
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+        h4{
+            font-size: 2rem;
+            line-height: 2.8rem;
+        }
+        h5{
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+        }
+        h6{
+            font-size: 1.7rem;
+        }
+    }
+}
+/* --- Four Boxes --- */
+@mixin bgSpan{
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+}
+#fourBoxes{
+    padding-bottom: 4rem;
+
+    .container{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .row{
+        margin-left: -3.5rem;
+        margin-right: -3.5rem
+    }
+
+    li{
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+        width: 25%;
+        margin-bottom: 2.5rem;
+
+        &:first-child .block{
+            background-color: $fourth-color;
+
+            span{
+                background-color: $fourth-color;
+                @include bgSpan;
+                
+            }
+        }
+        &:nth-child(2) .block{
+            background-color: $secondary-color;
+
+            span{
+                background-color: $secondary-color;
+                @include bgSpan;
+                
+            }
+        }
+        &:nth-child(3) .block{
+            background-color: $third-color;
+
+            span{
+                background-color: $third-color;
+                @include bgSpan;
+                
+            }
+        }
+        &:nth-child(4) .block{
+            background-color: $fifth-color;
+
+            span{
+                background-color: $fifth-color;
+                @include bgSpan;
+                
+            }
+        }
+    }
+    .block{
+        padding: 1.8rem 1rem;
+        transition: all linear 0.2s;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+        color: #fff;
+        text-align: center;
+
+        h4{
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            font-weight: 300;
+            padding-bottom: 0.8rem;
+        }
+
+        h5{
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            font-weight: 300;
+            padding-bottom: 0.8rem;
+            position: relative;
+
+            &:before{
+                position: absolute;
+                top: 0.5rem;
+                left: 0;
+                content: "";
+                width: 100%;
+                height: 0.1rem;
+                background-color: #fff;
+            }
+        }
+
+        h6{
+            font-size: 4.8rem;
+            font-weight: 400;
+
+            sup{
+                font-size: 1.8rem;
+            }
+        }
+
+        &:hover{
+            box-shadow: 0.5rem 0.5rem 1rem rgba($color: #000000, $alpha: 0.2);
+            transform: translateY(-0.5rem);
+        }
+    }
+}
+@media (max-width:1320px){
+    #fourBoxes{
+
+        .container{
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+
+            .row{
+                margin-left: -1.5rem;
+                margin-right: -1.5rem;
+            }
+        }
+
+        li{
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .block{
+
+            h6{
+                font-size: 4rem;
+            }
+
+        }
+
+    }
+}
+@media (min-width:992px){
+    #fourBoxes{
+        .owl-carousel{
+            display: none;
+        }
+    }
+}
+@media (max-width:991px){
+    #fourBoxes{
+        .desktop > .row{
+            display: none;
+        }
+    }
+    #fourBoxes .block{
+        &:hover{
+            box-shadow: none;
+            transform: none;
+        }
+    }
+    .owl-item{
+
+        .block{
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: 30rem;
+        }
+
+        .block.first{
+            background-color: $fourth-color;
+            span{
+                background-color: $fourth-color;
+                @include bgSpan;
+                
+            }
+        }
+        .block.sec{
+            background-color: $secondary-color;
+            span{
+                background-color: $secondary-color;
+                @include bgSpan;
+                
+            }
+        }
+        .block.third{
+            background-color: $third-color;
+            span{
+                background-color: $third-color;
+                @include bgSpan;
+                
+            }
+        }
+        .block.fourth{
+            background-color: $fifth-color;
+            span{
+                background-color: $fifth-color;
+                @include bgSpan;
+                
+            }
+        }
+    }
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background-color: $primary-color;
+}
+.owl-theme .owl-dots .owl-dot span{
+    border: 0.3rem solid $primary-color;
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+}
+/* --- Dynamic Info Area --- */
+#infoArea{
+    padding-bottom: 7rem;
+
+    figure{
+        padding: 1rem 0 0rem 1rem;
+        position: relative;
+
+        &:before{
+            width: 0; 
+            height: 0; 
+            border-right: 25rem solid transparent;
+            border-bottom: 25rem solid transparent;
+            border-left: 25rem solid $secondary-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            z-index: 1;
+        }
+
+        img{
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    .row{
+        align-items: center;
+    }
+    .infoArea__Right{
+        padding-left: 3rem;
+
+        h2{
+            text-transform: uppercase;
+            font-size: 4rem;
+            padding-bottom: 1rem;;
+        }
+        h3{
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-weight: 300;
+            padding-bottom: 3rem;
+        }
+
+    }
+
+}
+@media (max-width:1320px){
+    #infoArea{
+
+        .infoArea__Right{
+
+            h2{
+                font-size: 2.4rem;
+            }
+            h3{
+                font-size: 2.4rem;
+                padding-bottom: 2rem;
+            }
+
+        }
+
+        figure{
+
+            &:before{
+                border-right: 15rem solid transparent;
+                border-bottom: 15rem solid transparent;
+                border-left: 15rem solid #2ba888;
+            }
+
+        }
+
+    }
+}
+@media (max-width:991px){
+    #infoArea{
+
+        figure{
+            width: 100%;
+            max-width: 64rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 3rem;
+        }
+
+        .infoArea__Right{
+            padding-left: 0;
+            width: 100%;
+            max-width: 60rem;
+            margin-left: auto;
+            margin-right: auto;
+    
+            h2{
+                text-align: center;
+                font-size: 2rem;
+            }
+            h3{
+                font-size: 1.6rem;
+                text-align: center;
+            }
+        }
+    }
+}
+/* --- Overwritting TAB CSS --- */
+.tabs{
+    margin-bottom: 0;
+    padding-bottom: 3.5rem;
+    position: relative;
+}
+.tabs.style__horizontal .tabs__nav{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+}
+.tabs.style__horizontal .tabs__nav .tabs__nav_link{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0 5rem 0 0;
+}
+.tabs.style__horizontal .tabs__nav .tabs__nav_link.is__active{
+    color: $secondary-color;
+    border-bottom: 0.2rem solid $secondary-color;
+    text-shadow: none;
+}
+.tabs.style__horizontal .tabs__content.is__active{
+    padding: 0;
+    border: none;
+
+    ul{
+        padding-left: 1rem;
+
+        li{
+            position: relative;
+            padding: 0 0 3rem 3rem;
+
+            &:before{
+                width: 1rem;
+                height: 1rem;
+                background-color: $secondary-color;
+                border-radius: 50%;
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0.2rem;
+            }
+        }
+    }
+}
+@media (max-width:1320px){
+    .tabs.style__horizontal .tabs__content.is__active{
+
+        ul{
+
+            li{
+                padding:0 0 1.5rem 2rem;
+            }
+        }
+
+    }
+}
+@media (max-width:991px){
+    .tabs.style__horizontal .tabs__nav{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    .tabs.style__horizontal .tabs__nav .tabs__nav_link{
+        margin-right: 2.5rem;
+        margin-left: 2.5rem
+        ;
+    }
+}
+@media (max-width:575px){
+    #infoArea{
+        padding-bottom: 5rem;
+    }
+    .tabs.style__horizontal .tabs__content.is__active{
+
+        ul{
+
+            li{
+                font-size: 1.4rem;
+            }
+        }
+
+    }
+}

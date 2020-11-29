@@ -1,0 +1,44 @@
+@mixin gridPadding {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.container{
+    width: 100%;
+    max-width: 128rem;
+    margin-left: auto;
+    margin-right: auto;
+    @include gridPadding;
+}
+.row{
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+    @include gridPadding;
+}
+.col-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+    @include gridPadding;
+}
+
+/* --- Bigger Tablet Size --- */
+@media (max-width:1320px){
+    .container{
+        max-width: 96rem;
+    }
+}
+/* --- Small Tablet Size --- */
+@media (max-width:991px){
+    .container{
+        max-width: 72.2rem;
+    }
+    .col-6{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+img{
+    vertical-align: middle;
+}
+// Variables
+$primary-color: #0a264b; // Dark Blue Color
+$secondary-color: #2ba888; // Ocean Green Color
+$light-gray-color: #e6e6e6; // Light Gray Color
+$third-color: #9d669b; // Purple Color
+$fourth-color: #abc9b4; // Light Ocean Green Color
+$fifth-color: #e3ac5a; // Orange Color
+
+body{
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif; // Default font of the website
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Josefin Sans', sans-serif; 
+}
+// Clearfix (for clearing floats)
+.clearfix{
+    display: table-cell;
+    clear: both;
+    content: "";
+}
+.img-responsive{
+    max-width: 100%;
+    height: auto;
+}

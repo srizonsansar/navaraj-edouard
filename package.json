@@ -1,0 +1,14 @@
+{
+  "name": "navaraj-edouard",
+  "version": "1.0.0",
+  "description": "Responsive HTML5 and SASS Project",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Navaraj Subedi",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
